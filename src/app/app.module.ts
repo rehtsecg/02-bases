@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterModule } from './counter/counter.module';
-import { HeroComponent } from './heroes/hero/hero.component';
-import { ListComponent } from './heroes/list/list.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 
 
@@ -13,13 +12,12 @@ import { ListComponent } from './heroes/list/list.component';
   declarations: [
     AppComponent,
 
-    HeroComponent,
-    ListComponent,
   ],
   imports: [ // module va siempre en Imports
     BrowserModule,
     AppRoutingModule,
-    CounterModule
+    CounterModule,
+    HeroesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
