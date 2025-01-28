@@ -1,3 +1,18 @@
-<h1>DBZ Main page</h1>
-<h1>{{this.name}}</h1>
-<h1>{{upperName}}</h1>
+<h1>DBZ Personajes </h1>
+<hr>
+<div class="row">
+    <div class="col">
+  <dbz-list  [characterList]="characters"
+     (onDeleteEvent)="onDeleteCharacter($event)" >
+  </dbz-list>
+</div>
+<div class="col">
+    <!-- vamos a estar escuchando el evento ondelete -->
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+        <!-- 1. Se crea el evento onNewCharacter
+        2. Se crea el metodo onNewCharacter
+        3. Se pasa el evento al metodo onNewCharacter
+        4. $event es el objeto que se pasa al metodo onNewCharacter -->
+
+</div>
